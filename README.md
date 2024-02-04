@@ -5,7 +5,7 @@ Currently supporting [ox_inventory](https://github.com/overextended/ox_inventory
 - 🤝 Join our [Discord Server](https://discord.gg/547nKvQhZ7) for **free** support and **paid** resources!
 
 ## 🔽 Download
-If you don't know how to edit and build our resource just download it for free from the release page.
+If you don't know how to edit and build our resource just [download it](https://github.com/cinquina/five-idcard/releases/tag/1.0.0) for free from the [release](https://github.com/cinquina/five-idcard/releases/tag/1.0.0) page.
 
 ## 👀 Preview
 ![preview](https://i.imgur.com/zS6NHgd.png)
