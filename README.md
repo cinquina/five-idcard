@@ -7,7 +7,7 @@ This script uses **inventories** metadata to work.
 If you don't know how to edit and build our resource just [download it](https://github.com/cinquina/five-idcard/releases/tag/1.0.0) for free from the [release](https://github.com/cinquina/five-idcard/releases/tag/1.0.0) page.
 
 ## 👀 Preview
-![preview](https://i.imgur.com/zS6NHgd.png)
+https://www.youtube.com/watch?v=mB5aZOFjMV8
 
 ## 🤝 Support
 - [Documentation Page](https://five-developments.gitbook.io/scripts/scripts/five-idcard/setup)
