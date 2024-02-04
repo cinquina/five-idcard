@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.cdnfonts.com/css/lampard-signature');
+
+.nui-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.idcard-container {
+  font-family: 'Varela Round', sans-serif;
+  margin-right: 20px;
+  height: 300px;
+  width: 600px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgba(123, 184, 238, 1) 0%, rgba(230, 155, 195, 1) 100%);
+}
+
+.idcard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 13px;
+}
+
+.barrier {
+  height: 10px;
+  width: 170px;
+  background-color: #393b49;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 20px 0px 20px;
+  color: #393b49;
+}
+
+.header-title h4 {
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.header-title h5 {
+  margin: 0;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.idcard-wrapper {
+  display: flex;
+}
+
+.idcard-content {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  margin: 20px 0 0 0;
+}
+
+.idcard-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.idcard-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 95%;
+}
+
+.idcard-field .barrier {
+  height: 7px;
+  width: 100%;
+  background-color: #393b4967;
+}
+
+.idcard-field h4 {
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.idcard-column {
+  border-radius: 10px;
+  text-align: left;
+  color: #393b49;
+}
+
+.idcard-column h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.idcard-column h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 10000;
+  color: #393b49a3;
+}
+
+.idcard-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 205px;
+  margin: 0 20px 0 20px;
+  background-color: #9dafd3;
+}
+
+.idcard-image p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  font-family: 'Lampard Signature', sans-serif;
+  transform: translate(10px, 20px);
+  color: #3b5ffb;
+  font-size: 10px;
+}
+
+.idcard-image img {
+  width: 75%;
+  height: 55%;
+  background-color: #9dafd3;
+}
