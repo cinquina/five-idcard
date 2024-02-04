@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import { debugData } from "../utils/debugData";
-import { fetchNui } from "../utils/fetchNui";
+import { useNuiEvent } from "../hooks/useNuiEvent";
+import Container from "./Container";
 
 debugData([
   {
@@ -10,88 +11,44 @@ debugData([
   },
 ]);
 
+interface ReturnData {
+  firstName: string;
+  lastName: string;
+  dob: string,
+  sex: string,
+  exp: string,
+  cref: string,
+  class: string,
+  pref: string,
+}
+
 const App: React.FC = () => {
+  const [formData, setFormData] = useState({
+    firstName: 'JOHN',
+    lastName: 'DOE',
+    dob: '01/01/1990',
+    sex: 'M',
+    exp: '01/01/2025',
+    cref: '123456',
+    class: 'A',
+    pref: 'UNKNOWN',
+  });
+
+  useNuiEvent<ReturnData>('openIDCard', (data) => {
+    setFormData((prevData: ReturnData) => {
+      const updatedData: ReturnData = { ...prevData };
+      for (const key in data) {
+        if (data.hasOwnProperty(key) && key in updatedData) {
+          updatedData[key as keyof ReturnData] = data[key as keyof ReturnData] || ''; // https://stackoverflow.com/questions/57086672/element-implicitly-has-an-any-type-because-expression-of-type-string-cant-b
+        }
+      }
+      return updatedData;
+    });
+  });
+
   return (
     <div className="nui-wrapper">
-      <div className="idcard-container">
-        <div className="idcard-header">
-          <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-          <div className="header-title">
-            <h4>SAN ANDREAS</h4>
-            <h5>DRIVER LICENSE</h5>
-          </div>
-          <div className="barrier" style={{ clipPath: "polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%)" }}></div>
-        </div>
-
-        <div className="idcard-wrapper">
-          <div className="idcard-image">
-            <img src="./assets/male.png" alt="" />
-            <p>F D</p>
-          </div>
-          <div className="idcard-content">
-            <div className="idcard-row">
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>FIRST NAME</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>FIVE</h3>
-              </div>
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>DOB</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>2002-06-26</h3>
-              </div>
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>EXP</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>2026</h3>
-              </div>
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>CLASS</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>C</h3>
-              </div>
-            </div>
-            <div className="idcard-row">
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>LAST NAME</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>DEVELOPMENTS</h3>
-              </div>
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>SEX</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>M</h3>
-              </div>
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>CREF</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>F1V3D3VS</h3>
-              </div>
-              <div className="idcard-column">
-                <div className="idcard-field">
-                  <h4>PREF</h4>
-                  <div className="barrier" style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0 100%)" }}></div>
-                </div>
-                <h3>UNKNOWN</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Container formData={formData} />
     </div>
   );
 };

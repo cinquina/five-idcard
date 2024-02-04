@@ -1,0 +1,1 @@
+CreateRegisterItem(Config.ItemName)

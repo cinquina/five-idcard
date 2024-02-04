@@ -6,6 +6,7 @@
   display: flex;
   justify-content: right;
   align-items: center;
+  overflow: hidden;
 }
 
 .idcard-container {
@@ -15,6 +16,7 @@
   width: 600px;
   border-radius: 15px;
   background: linear-gradient(145deg, rgba(123, 184, 238, 1) 0%, rgba(230, 155, 195, 1) 100%);
+  overflow: hidden;
 }
 
 .idcard-header {
@@ -36,20 +38,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  white-space: nowrap;
   margin: 0px 20px 0px 20px;
   color: #393b49;
 }
 
 .header-title h4 {
   margin: 0;
-  white-space: nowrap;
   letter-spacing: 0.5px;
 }
 
 .header-title h5 {
   margin: 0;
   font-weight: 500;
-  white-space: nowrap;
   letter-spacing: 1px;
 }
 
@@ -86,27 +87,27 @@
 }
 
 .idcard-field h4 {
-  margin: 0;
   white-space: nowrap;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 
 .idcard-column {
-  border-radius: 10px;
   text-align: left;
   color: #393b49;
+  border-radius: 10px;
 }
 
 .idcard-column h3 {
-  margin: 0;
   font-size: 15px;
+  margin: 0;
 }
 
 .idcard-column h4 {
-  margin: 0;
   font-size: 12px;
-  font-weight: 10000;
+  font-weight: 500;
   color: #393b49a3;
+  margin: 0;
 }
 
 .idcard-image {
@@ -114,21 +115,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #9dafd3;
   width: 150px;
   height: 205px;
   margin: 0 20px 0 20px;
-  background-color: #9dafd3;
 }
 
 .idcard-image p {
   position: absolute;
+  font-family: 'Lampard Signature', sans-serif;
+  font-size: 10px;
+  color: #3b5ffb;
   bottom: 0;
   left: 0;
   margin: 0;
-  font-family: 'Lampard Signature', sans-serif;
   transform: translate(10px, 20px);
-  color: #3b5ffb;
-  font-size: 10px;
 }
 
 .idcard-image img {

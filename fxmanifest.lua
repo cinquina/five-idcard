@@ -1,21 +1,18 @@
 fx_version "cerulean"
+game "gta5"
 
-description "Basic React (TypeScript) & Lua Game Scripts Boilerplate"
-author "Project Error"
-version '1.0.0'
-repository 'https://github.com/project-error/fivem-react-boilerplate-lua'
-
+author "Five Developments"
+description "built using ps react boilerplate!"
 lua54 'yes'
-
-games {
-  "gta5",
-  "rdr3"
-}
 
 ui_page 'web/build/index.html'
 
-client_script "client/**/*"
-server_script "server/**/*"
+shared_script "config.lua"
+server_scripts {
+  "bridge/**/*.lua", -- bridge took from https://github.com/alp1x/um-idcard/bridge, all credits goes to alp1x :)
+  "server.lua"
+}
+client_script "client.lua"
 
 files {
 	'web/build/index.html',
