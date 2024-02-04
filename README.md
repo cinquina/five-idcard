@@ -11,4 +11,4 @@ If you don't know how to edit and build our resource just download it for free f
 ![preview](https://i.imgur.com/zS6NHgd.png)
 
 ## 💻 Developers
-- [Five Developments]([https://www.github.com/cinquina](https://discord.gg/547nKvQhZ7))
+- [Five Developments](https://discord.gg/547nKvQhZ7)
