@@ -1,2 +1,2 @@
 Config = {}
-Config.ItemName = 'idcard'
+Config.ItemName = 'id_card'
