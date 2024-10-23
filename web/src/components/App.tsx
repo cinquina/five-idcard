@@ -34,17 +34,7 @@ const App: React.FC = () => {
     pref: 'UNKNOWN',
   });
 
-  useNuiEvent<ReturnData>('openIDCard', (data) => {
-    setFormData((prevData: ReturnData) => {
-      const updatedData: ReturnData = { ...prevData };
-      for (const key in data) {
-        if (data.hasOwnProperty(key) && key in updatedData) {
-          updatedData[key as keyof ReturnData] = data[key as keyof ReturnData] || ''; // https://stackoverflow.com/questions/57086672/element-implicitly-has-an-any-type-because-expression-of-type-string-cant-b
-        }
-      }
-      return updatedData;
-    });
-  });
+  useNuiEvent<ReturnData>('openIDCard', setFormData);
 
   return (
     <div className="nui-wrapper">
